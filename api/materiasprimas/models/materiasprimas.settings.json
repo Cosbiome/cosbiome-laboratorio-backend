@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "materiasprimas",
+  "info": {
+    "name": "materiasprimas"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "cantidad": {
+      "type": "decimal"
+    },
+    "precio": {
+      "type": "decimal"
+    },
+    "clasificacion": {
+      "type": "string"
+    },
+    "caducidad": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/materiasprimas",
+      "handler": "materiasprimas.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/materiasprimas/count",
+      "handler": "materiasprimas.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/materiasprimas/:id",
+      "handler": "materiasprimas.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/materiasprimas",
+      "handler": "materiasprimas.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/materiasprimas/:id",
+      "handler": "materiasprimas.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/materiasprimas/:id",
+      "handler": "materiasprimas.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
