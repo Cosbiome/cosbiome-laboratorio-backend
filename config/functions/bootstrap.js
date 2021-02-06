@@ -1,6 +1,5 @@
 "use strict";
-
-const { default: createStrapi } = require("strapi");
+const socketio = require("socket.io");
 
 /**
  * An asynchronous bootstrap function that runs before
@@ -14,6 +13,15 @@ const { default: createStrapi } = require("strapi");
 
 module.exports = () => {
   process.nextTick(() => {
-    strapi.StrapIO = new (require("strapio"))(strapi);
+    let io = socketio(strapi.server, {
+      cors: {
+        origin: "*",
+        methods: ["GET", "POST"],
+        allowedHeaders: ["my-custom-header"],
+        credentials: false,
+      },
+    });
+
+    strapi.StrapIO = new (require("./utils/SocketUtil"))(io, strapi);
   });
 };
