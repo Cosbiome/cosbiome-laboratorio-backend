@@ -34,4 +34,24 @@ module.exports = {
 
     return sanitizeEntity(entity, { model: strapi.models.materiasprimas });
   },
+  async create(ctx) {
+    let entity;
+
+    ctx.query = {
+      ...ctx.query,
+      _limit: 100000,
+    };
+
+    if (ctx.is("multipart")) {
+      const { data, files } = parseMultipartData(ctx);
+      entity = await strapi.services.materiasprimas.create(data, { files });
+    } else {
+      entity = await strapi.services.materiasprimas.create(ctx.request.body);
+    }
+
+    let returnSocket = await strapi.services.materiasprimas.find(ctx.query);
+    strapi.StrapIO.emit(this, "updateMateriaPrima", returnSocket);
+
+    return sanitizeEntity(entity, { model: strapi.models.materiasprimas });
+  },
 };
