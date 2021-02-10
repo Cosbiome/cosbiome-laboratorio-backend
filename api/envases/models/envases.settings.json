@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "envases",
+  "info": {
+    "name": "envases"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "clasificacion": {
+      "type": "string"
+    },
+    "cantidad": {
+      "type": "integer"
+    },
+    "precio": {
+      "type": "decimal"
+    }
+  }
+}

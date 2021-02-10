@@ -54,4 +54,19 @@ module.exports = {
 
     return sanitizeEntity(entity, { model: strapi.models.materiasprimas });
   },
+  async delete(ctx) {
+    const { id } = ctx.params;
+
+    ctx.query = {
+      ...ctx.query,
+      _limit: 100000,
+    };
+
+    const entity = await strapi.services.materiasprimas.delete({ id });
+
+    let returnSocket = await strapi.services.materiasprimas.find(ctx.query);
+    strapi.StrapIO.emit(this, "updateMateriaPrima", returnSocket);
+
+    return sanitizeEntity(entity, { model: strapi.models.materiasprimas });
+  },
 };
