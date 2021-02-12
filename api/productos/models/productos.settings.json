@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "productos",
+  "info": {
+    "name": "productos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "clasificacion": {
+      "type": "string"
+    },
+    "materiales": {
+      "type": "json"
+    },
+    "precio": {
+      "type": "integer"
+    },
+    "codigo": {
+      "type": "string"
+    },
+    "caducidad": {
+      "type": "string"
+    },
+    "creacion": {
+      "type": "string"
+    },
+    "precioUnitario": {
+      "type": "integer"
+    },
+    "cantidad": {
+      "type": "integer"
+    },
+    "sobras": {
+      "type": "json"
+    }
+  }
+}
