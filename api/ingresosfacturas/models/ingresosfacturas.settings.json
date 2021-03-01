@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ingresosfacturas",
+  "info": {
+    "name": "ingresosfacturas"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "caducidad": {
+      "type": "string"
+    },
+    "cantidad": {
+      "type": "biginteger"
+    },
+    "factura": {
+      "type": "string"
+    },
+    "precio": {
+      "type": "biginteger"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "requisiciones",
+  "info": {
+    "name": "requisiciones",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "fechaDeEntrega": {
+      "type": "string"
+    },
+    "productos": {
+      "type": "json"
+    },
+    "entrego": {
+      "type": "string"
+    },
+    "solicito": {
+      "type": "string"
+    },
+    "fechaDeRequisicion": {
+      "type": "string"
+    },
+    "terminado": {
+      "type": "boolean",
+      "default": false
+    },
+    "idRequisicion": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/requisiciones",
+      "handler": "requisiciones.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/requisiciones/count",
+      "handler": "requisiciones.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/requisiciones/:id",
+      "handler": "requisiciones.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/requisiciones",
+      "handler": "requisiciones.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/requisiciones/:id",
+      "handler": "requisiciones.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/requisiciones/:id",
+      "handler": "requisiciones.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

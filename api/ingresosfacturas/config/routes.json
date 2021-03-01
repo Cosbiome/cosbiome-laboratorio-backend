@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/ingresosfacturas",
+      "handler": "ingresosfacturas.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ingresosfacturas/count",
+      "handler": "ingresosfacturas.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ingresosfacturas/:id",
+      "handler": "ingresosfacturas.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ingresosfacturas",
+      "handler": "ingresosfacturas.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/ingresosfacturas/:id",
+      "handler": "ingresosfacturas.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/ingresosfacturas/:id",
+      "handler": "ingresosfacturas.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -40,6 +40,10 @@
     },
     "sobras": {
       "type": "json"
+    },
+    "terminados": {
+      "type": "integer",
+      "default": 0
     }
   }
 }
